@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Video Upload</title>
+</head>
+
+<body>
+    <h1>Upload a Video</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="video">Choose a video to upload:</label>
+        <input type="file" name="video" id="video">
+        <br>
+        <button type="submit">Upload</button>
+    </form>
+
+    <hr>
+
+    <h1>Play a Video</h1>
+    <form action="/stream" method="get" id="streamForm">
+        <label for="filename">Enter the filename of the video:</label>
+        <input type="text" name="filename" id="filename">
+        <br>
+        <!-- <h1>Video Player</h1>
+        <video id="videoPlayer" controls>
+            <source src="" type="video/mp4">
+        </video> -->
+        <button type="submit">Play</button>
+
+    </form>
+
+    <hr>
+
+    <h1>Download a Video</h1>
+    <form action="/download" method="get">
+        <label for="filename">Enter the filename of the video:</label>
+        <input type="text" name="filename" id="filename">
+        <br>
+        <button type="submit">Download</button>
+    </form>
+
+    <hr>
+
+    <!-- <script>
+        const videoForm = document.getElementById('videoForm');
+        const streamForm = document.getElementById('streamForm');
+        const downloadForm = document.getElementById('downloadForm');
+        const videoPlayer = document.getElementById('videoPlayer'); -->
+
+    <!-- // Play a video
+        // streamForm.addEventListener('submit', (event) => {
+        //     event.preventDefault();
+        //     const filename = document.getElementById('filename').value;
+        //     videoPlayer.src = `/stream/${filename}`;
+        //     videoPlayer.load();
+
+        // });
+
+        // Download a video
+        // downloadForm.addEventListener('submit', (event) => {
+        //     event.preventDefault();
+        //     const filename = document.getElementById('filename').value;
+        //     window.location.href = `/download/${filename}`;
+        // }); -->
+    <!-- </script> -->
+</body>
+
+</html>
